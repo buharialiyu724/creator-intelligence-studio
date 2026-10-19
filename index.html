@@ -1,0 +1,85 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="theme-color" content="#0b0e13">
+<title>Creator Intelligence Studio</title>
+<meta name="description" content="AI YouTube niche research, long-form script planning, channel analytics and web research workspace.">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="shell">
+<aside class="sidebar">
+  <a class="brand" href="#"><span class="brand-icon">✦</span><span><b>Creator</b> Intelligence<small>STUDIO</small></span></a>
+  <div class="workspace-label">WORKSPACE</div>
+  <nav id="nav">
+    <button class="nav-item active" data-page="overview"><span>◫</span> Overview</button>
+    <button class="nav-item" data-page="niche"><span>⌕</span> Niche analyzer</button>
+    <button class="nav-item" data-page="scripts"><span>▤</span> Long-form scripts</button>
+    <button class="nav-item" data-page="analytics"><span>▥</span> Channel analytics</button>
+    <button class="nav-item" data-page="research"><span>◎</span> Web research</button>
+    <button class="nav-item" data-page="assistant"><span>✧</span> AI assistant</button>
+  </nav>
+  <div class="sidebar-bottom"><div class="online-dot"></div><div><b>Creator workspace</b><small>Research · Plan · Publish</small></div></div>
+</aside>
+<main class="main">
+<header class="topbar"><div><div class="crumb">CREATOR WORKSPACE / <span id="crumb">OVERVIEW</span></div><h1 id="pageTitle">Your creator command center</h1></div><div class="top-actions"><span class="status-pill"><i></i> Workspace ready</span><button class="avatar" title="Creator profile">CI</button></div></header>
+<section class="page active" id="page-overview">
+  <div class="hero"><div class="hero-copy"><span class="eyebrow">YOUR NEXT VIDEO STARTS HERE</span><h2>Turn ideas into a <em>channel strategy.</em></h2><p>Discover promising niches, build long-form scripts, analyze public channel stats, and research topics in one workspace.</p><button class="btn btn-lime" data-go="niche">Explore a niche <span>↗</span></button></div><div class="hero-art"><div class="orb orb-a"></div><div class="orb orb-b"></div><div class="orbit-card"><span>✦</span><b>Idea → Insight</b><small>Research powered workflow</small><div class="mini-bars"><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div></div></div></div>
+  <div class="section-head"><div><h3>Creator tools</h3><p>Choose a workflow to get moving</p></div><span class="muted">5 WORKFLOWS</span></div>
+  <div class="tool-grid">
+    <button class="tool-card" data-go="niche"><span class="tool-icon lime">⌕</span><b>YouTube niche analyzer</b><p>Audience, competition, evergreen potential and video angles.</p><span class="card-link">Analyze a niche ↗</span></button>
+    <button class="tool-card" data-go="scripts"><span class="tool-icon purple">▤</span><b>Long-form script builder</b><p>Build a structured script with hooks, scenes, pacing and CTA.</p><span class="card-link">Build a script ↗</span></button>
+    <button class="tool-card" data-go="analytics"><span class="tool-icon blue">▥</span><b>Channel analytics</b><p>Paste a channel or video URL to inspect public YouTube stats.</p><span class="card-link">Check a channel ↗</span></button>
+    <button class="tool-card" data-go="research"><span class="tool-icon orange">◎</span><b>Website research</b><p>Collect sourced findings, competitor context and content gaps.</p><span class="card-link">Research a topic ↗</span></button>
+    <button class="tool-card" data-go="assistant"><span class="tool-icon pink">✧</span><b>AI writing assistant</b><p>Brainstorm, outline, rewrite, critique and develop ideas.</p><span class="card-link">Open assistant ↗</span></button>
+  </div>
+  <div class="notice"><span>ⓘ</span><div><b>Connect your AI service to unlock generation</b><p>This interface works as a planning workspace. For model-powered answers and live research, deploy the included Worker and configure API secrets. YouTube public statistics require a YouTube Data API key.</p></div><button class="btn btn-outline" data-go="assistant">Setup guide</button></div>
+</section>
+<section class="page" id="page-niche">
+  <div class="page-intro"><span class="eyebrow">STRATEGY LAB</span><h2>Find your next <em>winning niche.</em></h2><p>Score an idea against audience demand, evergreen value, monetization, competition and production effort. AI mode can turn the brief into a research-backed analysis.</p></div>
+  <div class="form-card"><div class="form-grid">
+    <label>Topic or niche<input id="nicheTopic" placeholder="e.g. retirement planning for beginners"></label>
+    <label>Target audience<input id="nicheAudience" placeholder="e.g. adults aged 50–62"></label>
+    <label>Channel format<select id="nicheFormat"><option>Faceless long-form</option><option>On-camera long-form</option><option>YouTube Shorts</option><option>Mixed format</option></select></label>
+    <label>Creator experience<select id="nicheExperience"><option>Beginner</option><option>Intermediate</option><option>Experienced</option></select></label>
+    <label class="full">Goals and constraints<textarea id="nicheGoals" rows="3" placeholder="e.g. evergreen, low startup budget, global audience"></textarea></label>
+  </div><button class="btn btn-lime" id="analyzeNiche">Analyze niche <span>✦</span></button><span class="form-help">AI mode uses the configured provider. Without it, you'll get a starter framework, not live market data.</span></div>
+  <div id="nicheResult" class="result-area empty-result">Your niche analysis will appear here.</div>
+</section>
+<section class="page" id="page-scripts">
+  <div class="page-intro"><span class="eyebrow">SCRIPT WORKSHOP</span><h2>Build a long-form <em>video script.</em></h2><p>Create a detailed video blueprint, then expand it into a full narration draft with scene cues, retention beats and a natural call to action.</p></div>
+  <div class="form-card"><div class="form-grid">
+    <label>Video title / topic<input id="scriptTopic" placeholder="e.g. 7 retirement mistakes to avoid"></label>
+    <label>Target runtime<select id="scriptRuntime"><option value="8">8 minutes</option><option value="12">12 minutes</option><option value="20" selected>20 minutes</option><option value="30">30 minutes</option><option value="45">45 minutes</option></select></label>
+    <label>Voice and tone<select id="scriptTone"><option>Warm expert storyteller</option><option>High-retention documentary</option><option>Friendly educator</option><option>Cinematic and dramatic</option><option>Calm and reassuring</option></select></label>
+    <label>Audience<input id="scriptAudience" placeholder="Who is this video for?"></label>
+    <label class="full">Key points to include<textarea id="scriptPoints" rows="3" placeholder="Examples, lessons, sources, stories, or must-cover points"></textarea></label>
+  </div><div class="button-row"><button class="btn btn-lime" id="buildOutline">Build outline</button><button class="btn btn-outline" id="buildScript">Generate full script ✦</button></div><span class="form-help">Long outputs may need to be generated in sections to avoid response limits. Verify factual claims before publishing.</span></div>
+  <div id="scriptResult" class="result-area empty-result">Your outline or script will appear here. Use Export to save the result as a text file.</div>
+</section>
+<section class="page" id="page-analytics">
+  <div class="page-intro"><span class="eyebrow">CHANNEL INTELLIGENCE</span><h2>Read the public <em>signals.</em></h2><p>Paste a YouTube channel or video URL. Public stats can be retrieved through YouTube Data API when configured. Private creator analytics require channel-owner OAuth authorization.</p></div>
+  <div class="form-card"><label>YouTube channel or video URL<input id="youtubeUrl" placeholder="https://www.youtube.com/@channel or video URL"></label><div class="button-row"><button class="btn btn-lime" id="checkChannel">Analyze link</button><button class="btn btn-outline" id="demoAnalytics">Show sample dashboard</button></div><span class="form-help">Never paste passwords or private access tokens. This app only requests public stats unless you explicitly implement OAuth.</span></div>
+  <div id="analyticsResult" class="result-area empty-result">Channel details, public metrics and video information will appear here.</div>
+</section>
+<section class="page" id="page-research">
+  <div class="page-intro"><span class="eyebrow">RESEARCH DESK</span><h2>Research before you <em>record.</em></h2><p>Develop a source-backed brief, identify questions viewers ask, and turn research into video angles. Configure a search provider in the Worker for live website research.</p></div>
+  <div class="form-card"><div class="form-grid"><label class="full">Research question<input id="researchTopic" placeholder="e.g. What changed in retirement rules in 2026?"></label><label>Research depth<select id="researchDepth"><option>Quick overview</option><option selected>Detailed research brief</option><option>Competitor and content-gap analysis</option></select></label><label>Geographic focus<input id="researchGeo" placeholder="Global, US, UK, Nigeria…"></label><label class="full">Preferred websites or exclusions<textarea id="researchSites" rows="2" placeholder="Optional domains, trusted sources, or sites to exclude"></textarea></label></div><button class="btn btn-lime" id="runResearch">Research topic ✦</button></div>
+  <div id="researchResult" class="result-area empty-result">Research findings and source links will appear here.</div>
+</section>
+<section class="page" id="page-assistant">
+  <div class="page-intro"><span class="eyebrow">AI COPILOT</span><h2>Think, write and <em>iterate.</em></h2><p>Choose an AI provider configured on your server. Never expose provider API keys in browser code or a public GitHub repository.</p></div>
+  <div class="form-card">
+    <div class="form-grid"><label>AI provider<select id="aiProvider"><option value="openai">OpenAI</option><option value="anthropic">Anthropic Claude</option></select></label><label>Task type<select id="assistantTask"><option>Brainstorm video ideas</option><option>Improve a title and thumbnail concept</option><option>Critique a script</option><option>Build a content calendar</option><option>Explain a topic simply</option><option>Custom assistant</option></select></label><label class="full">Your prompt<textarea id="assistantPrompt" rows="5" placeholder="Tell the assistant what you want to accomplish…"></textarea></label></div>
+    <button class="btn btn-lime" id="askAssistant">Ask assistant ✦</button>
+    <div class="settings-note"><b>Server setup</b><p>Set <code>OPENAI_API_KEY</code> and/or <code>ANTHROPIC_API_KEY</code> as Worker secrets. Optional live search requires a configured search provider. Set <code>APP_ORIGIN</code> to your deployed site origin for CORS.</p></div>
+  </div>
+  <div id="assistantResult" class="result-area empty-result">Your AI response will appear here.</div>
+</section>
+<footer class="main-footer"><span>CREATOR INTELLIGENCE STUDIO</span><span>Independent creator tool · Not affiliated with YouTube, vidIQ, OpenAI or Anthropic.</span></footer>
+</main>
+</div>
+<div id="toast" class="toast" role="status"></div>
+<script src="app.js"></script>
+</body></html>
